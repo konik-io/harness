@@ -27,4 +27,15 @@ public interface FileAppender {
     * @param appendable the appendable object
     */
    void append(AppendParameter appendable);
+
+   /**
+    * Returns specified priority of given implementation class.
+    *
+    * Priority value is being used when there are multiple FileAppender implementation
+    * found in the classpath. An implementation with the highest priority is used
+    * in that case.
+    *
+    * @return priority value
+    */
+   int getPriority();
 }
